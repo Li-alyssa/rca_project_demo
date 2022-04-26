@@ -1,10 +1,10 @@
 <template>
-  <div id="One" style="width: 100%; height: 100%"></div>
+  <div id="Two" style="width: 100%; height: 100%"></div>
 </template>
 
 <script>
 export default {
-  name: "One",
+  name: "Two",
   data() {
     return {};
   },
@@ -14,9 +14,9 @@ export default {
   methods: {
     initCharts() {
       // 初始化echarts实例
-      var myChart = this.$echarts.init(document.getElementById("One"));
+      var myChart = this.$echarts.init(document.getElementById("Two"));
       // 绘制图表
-      let value = 55.33;
+      let value = 99.04;
       myChart.setOption({
         backgroundColor: "#161522",
         title: {
