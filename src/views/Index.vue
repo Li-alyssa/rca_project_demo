@@ -23,7 +23,7 @@
 <script>
 export default {
   data() {
-    // bannerH: 300;
+    bannerH: 300;
     return {
       imgData: [
         { src: require("../assets/img/pic1.jpg") },
