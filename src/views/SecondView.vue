@@ -9,7 +9,10 @@
       <div id="left-one"><Sixx /></div>
     </section>
     <section class="screen-right">
-      <div id="right-top"><TopTable /></div>
+      <div id="right-top">
+        <div id="right-top-title">▎ 嵌套纬度下钻分析</div>
+        <TopTable />
+      </div>
       <div id="right-bottom">
         <div id="right-bottom-title">▎ 机房模块多维度关联分析</div>
         <HeatMap />
@@ -68,7 +71,11 @@ export default {
     #right-top {
       height: 49%;
       position: relative;
-      background-color: skyblue;
+    }
+    #right-top-title {
+      height: 5%;
+      margin-bottom: 0.5%;
+      color: aliceblue;
     }
     #right-bottom {
       height: 47%;

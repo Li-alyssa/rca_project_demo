@@ -2,26 +2,25 @@
   <div>
     <el-table
       :data="tableData"
-      style="width: 100%; margin-bottom: 20px"
+      style="width: 100%"
       row-key="id"
-      border
       default-expand-all
       :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
-      max-height="350"
-      header-cell-class-name="tableStyle"
+      max-height="330"
+      :header-cell-style="{ background: '#161522' }"
     >
-      <el-table-column prop="date" label="统计" sortable width="180">
+      <el-table-column prop="statistics" label="统计" sortable width="180">
       </el-table-column>
-      <el-table-column prop="name" label="拒绝量" sortable width="180">
+      <el-table-column prop="reject" label="拒绝量" sortable width="180">
       </el-table-column>
-      <el-table-column prop="address" label="拒绝占比"> </el-table-column>
-      <el-table-column prop="address" label="健康度"> </el-table-column>
+      <el-table-column prop="rejection" label="拒绝占比" sortable width="180">
+      </el-table-column>
+      <el-table-column prop="health" label="健康度" sortable width="180">
+      </el-table-column>
 
       <el-table-column fixed="right" label="操作" width="100">
         <template slot-scope="scope">
-          <el-button @click="handleClick(scope.row)" type="text" size="small"
-            >查看</el-button
-          >
+          <el-button type="text" size="small">查看</el-button>
           <el-button type="text" size="small">编辑</el-button>
         </template>
       </el-table-column>
@@ -35,53 +34,61 @@ export default {
       tableData: [
         {
           id: 1,
-          date: "2016-05-02",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄",
+          statistics: "机房A",
+          reject: 190,
+          rejection: "59.997%",
+          health: "93.223%",
         },
         {
           id: 2,
-          date: "2016-05-04",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1517 弄",
+          statistics: "机房B",
+          reject: 96,
+          rejection: "28.829%",
+          health: "94.333%",
         },
         {
           id: 3,
-          date: "2016-05-01",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1519 弄",
+          statistics: "机房C",
+          reject: 94,
+          rejection: "27.445%",
+          health: "98.227%",
           children: [
             {
               id: 31,
-              date: "2016-05-01",
-              name: "王小虎",
-              address: "上海市普陀区金沙江路 1519 弄",
+              statistics: "机器A",
+              reject: 90,
+              rejection: "20.445%",
+              health: "93.889%",
             },
             {
               id: 32,
-              date: "2016-05-01",
-              name: "王小虎",
-              address: "上海市普陀区金沙江路 1519 弄",
+              statistics: "机器B",
+              reject: 4,
+              rejection: "7%",
+              health: "99.335%",
             },
           ],
         },
         {
           id: 4,
-          date: "2016-05-03",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1516 弄",
+          statistics: "机房B",
+          reject: 96,
+          rejection: "28.829%",
+          health: "94.333%",
         },
         {
           id: 5,
-          date: "2016-05-03",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1516 弄",
+          statistics: "机房B",
+          reject: 96,
+          rejection: "28.829%",
+          health: "94.333%",
         },
         {
           id: 6,
-          date: "2016-05-03",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1516 弄",
+          statistics: "机房B",
+          reject: 96,
+          rejection: "28.829%",
+          health: "94.333%",
         },
       ],
     };
@@ -90,9 +97,20 @@ export default {
 </script>
 
 <style scoped>
-/* .tableStyle {
-  background-color: #1989fa !important;
-  color: #fff;
-  font-weight: 400;
-} */
+::v-deep .el-table__body tbody tr {
+  background-color: #161522;
+}
+
+::v-deep .el-table__fixed-right-patch {
+  background-color: #161522;
+}
+/* // 滚动条的宽度 */
+::v-deep .el-table__body-wrapper::-webkit-scrollbar {
+  background-color: #161522;
+}
+/* // 滚动条的滑块 */
+::v-deep .el-table__body-wrapper::-webkit-scrollbar-thumb {
+  background-color: #161522;
+  border-radius: 3px;
+}
 </style>
