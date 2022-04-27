@@ -2,47 +2,57 @@
   <div class="screen-body">
     <section class="screen-left">
       <div id="left-top">
-        <One />
+        <Lefttop />
+      </div>
+      <div id="left-middle">
+        <Leftmiddle />
       </div>
       <div id="left-bottom">
-        <Two />
+        <Leftbottom />
       </div>
     </section>
     <section class="screen-middle">
       <div id="middle-top">
-        <Three />
+        <Middletop />
       </div>
       <div id="middle-bottom">
-        <Four />
+        <Middlebottom />
       </div>
     </section>
     <section class="screen-right">
       <div id="right-top">
-        <Five />
+        <Righttop />
+      </div>
+      <div id="right-middle">
+        <Rightmiddle />
       </div>
       <div id="right-bottom">
-        <Sixx />
+        <Rightbottom />
       </div>
     </section>
   </div>
 </template>
 <script>
-import One from "@/components/firstpage/One.vue";
-import Two from "@/components/firstpage/Two.vue";
-import Three from "@/components/firstpage/Three.vue";
-import Four from "@/components/firstpage/Four.vue";
-import Five from "@/components/firstpage/Five.vue";
-import Sixx from "@/components/firstpage/Sixx.vue";
+import Middletop from "@/components/firstpage/middlepage/middletop.vue";
+import Middlebottom from "@/components/firstpage/middlepage/middlebottom.vue";
+import Lefttop from "@/components/firstpage/leftpage/lefttop.vue";
+import Leftmiddle from "@/components/firstpage/leftpage/leftmiddle.vue";
+import Leftbottom from "@/components/firstpage/leftpage/leftbottom.vue";
+import Righttop from "@/components/firstpage/rightpage/righttop.vue";
+import Rightmiddle from "@/components/firstpage/rightpage/rightmiddle.vue";
+import Rightbottom from "@/components/firstpage/rightpage/rightbottom.vue";
 
 export default {
   name: "AboutView",
   components: {
-    One,
-    Two,
-    Three,
-    Four,
-    Five,
-    Sixx,
+    Middletop,
+    Middlebottom,
+    Lefttop,
+    Leftmiddle,
+    Leftbottom,
+    Righttop,
+    Rightmiddle,
+    Rightbottom,
   },
 };
 </script>
@@ -57,13 +67,20 @@ export default {
     height: 100%;
     width: 27.6%;
     #left-top {
-      height: 53%;
+      height: 33%;
+      margin-top: 0.5%;
+      position: relative;
+      // background-color: #fff;
+    }
+    #left-middle {
+      height: 33%;
+      margin-top: 0.5%;
       position: relative;
       // background-color: #fff;
     }
     #left-bottom {
-      height: 42%;
-      margin-top: 25px;
+      height: 33%;
+      margin-top: 0.5%;
       position: relative;
       // background-color: #fff;
     }
@@ -75,14 +92,14 @@ export default {
     margin-right: 1.6%;
     #middle-top {
       width: 100%;
-      height: 56%;
+      height: 35%;
       position: relative;
       // background-color: #fff;
     }
     #middle-bottom {
-      margin-top: 25px;
+      margin-top: 1%;
       width: 100%;
-      height: 39%;
+      height: 64%;
       position: relative;
       // background-color: #fff;
     }
@@ -91,13 +108,20 @@ export default {
     height: 100%;
     width: 27.6%;
     #right-top {
-      height: 46%;
+      height: 30%;
+      margin-top: 0.5%;
       position: relative;
-      // background-color: red;
+      // background-color: #fff;
+    }
+    #right-middle {
+      height: 36%;
+      margin-top: 0.5%;
+      position: relative;
+      // background-color: #fff;
     }
     #right-bottom {
-      height: 49%;
-      margin-top: 25px;
+      height: 33%;
+      margin-top: 0.5%;
       position: relative;
       // background-color: #fff;
     }
