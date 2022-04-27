@@ -311,6 +311,13 @@ export default {
         });
       }
       myChart.setOption({
+        title: {
+          text: "▎ 节点关系图例",
+          left: "left",
+          textStyle: {
+            color: "#fff",
+          },
+        },
         backgroundColor: "#161522",
         toolbox: {
           show: true,
